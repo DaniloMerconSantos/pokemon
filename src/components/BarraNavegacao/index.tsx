@@ -5,7 +5,7 @@ class BarraNavegacao extends Component{
 
     render(){
         return(
-            <div>
+            <div data-testid='barraNavegacao'>
                 <ul>
                     <li>
                         <Link to="/">Pokemons</Link>

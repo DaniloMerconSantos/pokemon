@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  background-color: #282c34eb;
+  background-color: #2a74ba4a;
   min-height: 100vh;
 }
 
@@ -19,5 +19,9 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-footer {
+  padding: 2rem 0;
 }
 

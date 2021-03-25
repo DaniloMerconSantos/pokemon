@@ -1,7 +1,7 @@
 .Page {
-    background-color: #daf1e8;
+    background-color: #fff;
     width: 95vh;
-    height: auto;
     border-radius: 1rem;
     margin: auto;
+    border: solid 2px #2a74ba;
 }

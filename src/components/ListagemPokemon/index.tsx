@@ -1,12 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
+import IPokemon from '../../models/pokemon'
+import Pokemon from '../Pokemon';
+import { Col, Row } from 'reactstrap';
 
-class ListagemPokemon extends Component {
+interface IListagemPokemonProps {
+    pokemons: IPokemon[]
+}
+const ListagemPokemon: React.FC<IListagemPokemonProps> = ({pokemons}) => {
 
-    render(){
-        return(
-            <h1>listagem</h1>
-        )
-    }
+    return (
+        <Row>
+            {
+                pokemons.map( dados => {
+                    return (
+                        <Col sm="3" key={dados.id}>
+                            <Pokemon name={dados.name} image={dados.sprites.front_default} id={dados.id} type={dados.types.map( ele => ele.type)}/>
+                        </Col>
+                    )
+                })
+            }
+        </Row>
+    )
+    
 }
 
 export default ListagemPokemon;

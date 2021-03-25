@@ -7,9 +7,10 @@
 .Menu {
     list-style:none;
     float:left;
-    background-color: #d9f1e8;
+    background-color: #fff;
     border-radius: 2rem;
     padding: 0 1rem;
+    border: solid 2px #2a74ba;
 }
 
 .Menu ul {

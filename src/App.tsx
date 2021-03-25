@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Suspense fallback={Loader}>
+      <Suspense fallback={<Loader/>}>
         <Router>
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
@@ -26,7 +26,10 @@ function App() {
                 <Route{...route} key={i}/>
               ))}
           </Switch>
-      </Router>
+          <footer className='App-footer'>
+            Challeng!!
+          </footer>
+        </Router>
       </Suspense>
       
     </div>

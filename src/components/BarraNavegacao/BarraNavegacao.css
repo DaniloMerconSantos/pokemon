@@ -1,0 +1,34 @@
+.Navegacao {
+    width: 100%;
+    font-family: Pokemon;
+    display: contents;
+}
+
+.Menu {
+    list-style:none;
+    float:left;
+    background-color: #d9f1e8;
+    border-radius: 2rem;
+    padding: 0 1rem;
+}
+
+.Menu ul {
+    list-style: none;
+    padding: 0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.Menu li {
+    position:relative;
+    float: left;
+}
+
+.Menu li a {
+    color: #ffcb03 !important;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 1rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #2a74ba;
+}

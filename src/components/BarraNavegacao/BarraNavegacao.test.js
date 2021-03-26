@@ -1,13 +1,13 @@
-import React from 'react'
-import { render, screen } from '../../__test__/test-utils';
-import BarraNavegacao from '.';
+import React from "react";
+import { render, screen } from "../../__test__/test-utils";
+import BarraNavegacao from ".";
 
-describe('O componente BarraNavegacao', () => {
-    it('renderiza sem problemas', ()=> {
-        render(<BarraNavegacao />);
+describe("O componente BarraNavegacao", () => {
+  it("renderiza sem problemas", () => {
+    render(<BarraNavegacao />);
 
-        const barra = screen.getByTestId('barraNavegacao');
+    const barra = screen.getByTestId("barraNavegacao");
 
-        expect(barra).toBeInTheDocument();
-    })
-})
+    expect(barra).toBeInTheDocument();
+  });
+});

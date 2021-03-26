@@ -1,22 +1,28 @@
-import axios from 'axios';
-import IPokemon from '../models/pokemon';
+import axios, { AxiosResponse } from "axios";
+import IPokemon from "../models/pokemon";
 import IResource from "../models/resource";
 
 interface IPokemonListResponse {
-    count: number,
-    next: string | null,
-    previous: string | null, 
-    results: [IResource] 
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: [IResource];
 }
 
-const API =  axios.create({
-  baseURL: `https://pokeapi.co/api/v2/`
+const API = axios.create({
+  baseURL: `https://pokeapi.co/api/v2/`,
 });
 
-export const listarPokemon = (page?: number) => {
-    return API.get<IPokemonListResponse>(`pokemon?limit=20&offset=${page ? page*20: ''}`);
-}
+export const listarPokemon = (
+  page?: number
+): Promise<AxiosResponse<IPokemonListResponse>> => {
+  return API.get<IPokemonListResponse>(
+    `pokemon?limit=20&offset=${page ? page * 20 - 20 : ""}`
+  );
+};
 
-export const obterPokemon = (name: string) => {
-    return API.get<IPokemon>(`pokemon/${name}`)
-}
+export const obterPokemon = (
+  name: string
+): Promise<AxiosResponse<IPokemon>> => {
+  return API.get<IPokemon>(`pokemon/${name}`);
+};

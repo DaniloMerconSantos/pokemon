@@ -1,35 +1,36 @@
 .Navegacao {
-    width: 100%;
-    font-family: Pokemon;
-    display: contents;
+  width: 100%;
+  font-family: Pokemon;
+  display: contents;
 }
 
 .Menu {
-    list-style:none;
-    float:left;
-    background-color: #fff;
-    border-radius: 2rem;
-    padding: 0 1rem;
-    border: solid 2px #2a74ba;
+  list-style: none;
+  float: left;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 0 1rem;
+  border: solid 2px #2a74ba;
+  margin-top: 1rem;
 }
 
 .Menu ul {
-    list-style: none;
-    padding: 0;
-    margin-left:auto;
-    margin-right:auto;
+  list-style: none;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Menu li {
-    position:relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 
 .Menu li a {
-    color: #ffcb03 !important;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 1rem;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #2a74ba;
+  color: #ffcb03 !important;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 1rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #2a74ba;
 }

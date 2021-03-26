@@ -24,7 +24,7 @@ const Pokemon: React.FC<IPokemonProps> = ({
 }) => {
   return (
     <Card className="m-2 h-100">
-      <CardBody className="d-flex justify-content-between">
+      <CardBody className="d-inline justify-content-between">
         <CardTitle className="nomePokemon" tag="h5">
           {name} <small className="text-muted">#{id}</small>{" "}
         </CardTitle>

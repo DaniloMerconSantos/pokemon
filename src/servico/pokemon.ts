@@ -22,7 +22,7 @@ export const listarPokemon = (
 };
 
 export const obterPokemon = (
-  name: string
+  value: string | number
 ): Promise<AxiosResponse<IPokemon>> => {
-  return API.get<IPokemon>(`pokemon/${name}`);
+  return API.get<IPokemon>(`pokemon/${value}`);
 };

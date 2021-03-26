@@ -40,7 +40,7 @@ const Paginador: React.FC<IPaginadorProps> = ({
   for (let i = inicio; i <= fim; i++) {
     const isActive = paginaAtual === i;
     const pageItem = (
-      <PaginationItem>
+      <PaginationItem key={i}>
         <PaginationLink onClick={() => (isActive ? () => {} : onChange(i))}>
           {i}
         </PaginationLink>

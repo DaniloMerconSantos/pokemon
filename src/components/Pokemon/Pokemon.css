@@ -1,0 +1,8 @@
+.Botao {
+  border: 0;
+  background-color: #fff;
+}
+
+.nomePokemon {
+  text-transform: capitalize;
+}

@@ -10,7 +10,7 @@ const TipoPokemon: React.FC<ITypeProps> = ({ tipos }) => {
   return (
     <>
       {tipos.map((nome) => (
-        <Badge className={`type type--${nome} m-1`} pill>
+        <Badge key={nome} className={`type type--${nome} m-1`} pill>
           {nome}
         </Badge>
       ))}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  Button,
   Dropdown,
   DropdownItem,
   DropdownMenu,
@@ -41,8 +42,12 @@ const BarraPesquisa: React.FC = () => {
   };
 
   return (
-    <Form autoComplete="off">
-      <Dropdown isOpen={dropdownOpen} toggle={() => {}}>
+    <Form
+      autoComplete="off"
+      data-testid="form-navegacao"
+      className="d-flex justify-content-between"
+    >
+      <Dropdown className="w-100" isOpen={dropdownOpen} toggle={() => {}}>
         <DropdownToggle tag="div">
           <InputGroup>
             <InputGroupAddon addonType="prepend">
@@ -56,6 +61,7 @@ const BarraPesquisa: React.FC = () => {
               placeholder="Nome Pokemon"
               onChange={alterarValor}
               name="q"
+              data-testid="imput-name"
             />
           </InputGroup>
         </DropdownToggle>
@@ -77,6 +83,9 @@ const BarraPesquisa: React.FC = () => {
           )}
         </DropdownMenu>
       </Dropdown>
+      <Button className="ml-2" color="primary" type="submit">
+        Pesquisar
+      </Button>
     </Form>
   );
 };

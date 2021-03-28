@@ -30,20 +30,28 @@ const ListagemPokemon: React.FC<IListagemPokemonProps> = ({ pokemons }) => {
   return (
     <>
       <Row noGutters>
-        {pokemons.map((dados) => {
-          return (
-            <Col sm="3" xs="6" className="mb-4" key={dados.id}>
-              <Pokemon
-                name={dados.name}
-                image={dados.sprites.front_default}
-                id={dados.id}
-                type={dados.types.map((ele) => ele.type)}
-                favorito={pokeFav.includes(dados.id)}
-                alterarFav={alternarFavorito}
-              />
-            </Col>
-          );
-        })}
+        {pokemons.length > 0
+          ? pokemons.map((dados) => {
+              return (
+                <Col
+                  data-testid="lista-pokemon"
+                  sm="3"
+                  xs="6"
+                  className="mb-4"
+                  key={dados.id}
+                >
+                  <Pokemon
+                    name={dados.name}
+                    image={dados.sprites.front_default}
+                    id={dados.id}
+                    type={dados.types.map((ele) => ele.type)}
+                    favorito={pokeFav.includes(dados.id)}
+                    alterarFav={alternarFavorito}
+                  />
+                </Col>
+              );
+            })
+          : ""}
       </Row>
     </>
   );

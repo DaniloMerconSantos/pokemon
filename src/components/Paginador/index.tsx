@@ -1,5 +1,5 @@
 import React from "react";
-import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+import { Pagination, PaginationItem, PaginationLink, Row } from "reactstrap";
 
 interface IPaginadorProps {
   totalRegistro: number;
@@ -51,37 +51,39 @@ const Paginador: React.FC<IPaginadorProps> = ({
 
   return (
     <>
-      {numPaginas > 1 && (
-        <Pagination size="sm">
-          {paginaAtual > 1 && (
-            <>
-              <PaginationItem>
-                <PaginationLink first onClick={() => onChange(1)} />
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink
-                  previous
-                  onClick={() => onChange(paginaAtual - 1)}
-                />
-              </PaginationItem>
-            </>
-          )}
-          {itens}
-          {paginaAtual < numPaginas && (
-            <>
-              <PaginationItem>
-                <PaginationLink
-                  next
-                  onClick={() => onChange(paginaAtual + 1)}
-                />
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink last onClick={() => onChange(numPaginas)} />
-              </PaginationItem>
-            </>
-          )}
-        </Pagination>
-      )}
+      <Row data-testid="paginacao">
+        {numPaginas > 1 && (
+          <Pagination size="sm">
+            {paginaAtual > 1 && (
+              <>
+                <PaginationItem>
+                  <PaginationLink first onClick={() => onChange(1)} />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink
+                    previous
+                    onClick={() => onChange(paginaAtual - 1)}
+                  />
+                </PaginationItem>
+              </>
+            )}
+            {itens}
+            {paginaAtual < numPaginas && (
+              <>
+                <PaginationItem>
+                  <PaginationLink
+                    next
+                    onClick={() => onChange(paginaAtual + 1)}
+                  />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink last onClick={() => onChange(numPaginas)} />
+                </PaginationItem>
+              </>
+            )}
+          </Pagination>
+        )}
+      </Row>
     </>
   );
 };

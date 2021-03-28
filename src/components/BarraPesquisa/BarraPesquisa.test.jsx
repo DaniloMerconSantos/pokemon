@@ -3,18 +3,20 @@ import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
 
-import BarraNavegacao from ".";
+import BarraPesquisa from ".";
 
-describe("O componente BarraNavegacao", () => {
+describe("O componente BarraPesquisa", () => {
   it("renderiza sem problemas", () => {
     const { getByTestId } = render(
       <MemoryRouter>
-        <BarraNavegacao />
+        <BarraPesquisa />
       </MemoryRouter>
     );
 
-    const barra = getByTestId("barraNavegacao");
+    const barra = getByTestId("form-navegacao");
+    const imput = getByTestId("imput-name");
 
     expect(barra).toBeInTheDocument();
+    expect(imput).toBeInTheDocument();
   });
 });
